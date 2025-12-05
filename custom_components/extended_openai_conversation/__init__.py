@@ -363,7 +363,7 @@ class OpenAIAgent(conversation.AbstractConversationAgent):
         response: ChatCompletion = await self.client.chat.completions.create(
             model=model,
             messages=messages,
-            max_tokens=max_tokens,
+            max_completion_tokens=max_tokens,
             top_p=top_p,
             temperature=temperature,
             user=user_input.conversation_id,

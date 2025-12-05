@@ -65,7 +65,7 @@ async def async_setup_services(hass: HomeAssistant, config: ConfigType) -> None:
             ).chat.completions.create(
                 model=model,
                 messages=messages,
-                max_tokens=call.data["max_tokens"],
+                max_completion_tokens=call.data["max_tokens"],
             )
             response_dict = response.model_dump()
             _LOGGER.info("Response %s", response_dict)
