@@ -69,6 +69,7 @@ def get_function_executor(value: str):
 
 
 def is_azure(base_url: str):
+    return True
     if base_url and re.search(AZURE_DOMAIN_PATTERN, base_url):
         return True
     return False
